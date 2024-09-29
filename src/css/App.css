@@ -1,0 +1,24 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  height: 98vh;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.post-list-container {
+  flex: 1;
+  overflow-y: auto;
+  border-right: 2px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.post-detail-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}

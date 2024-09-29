@@ -1,0 +1,12 @@
+.post-content {
+  margin-bottom: 20px;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment strong {
+  display: block;
+  margin-bottom: 5px;
+}

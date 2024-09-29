@@ -1,3 +1,5 @@
+import './css/PostList.css';
+
 type Post = {
   userId: number;
   id: number;
@@ -19,21 +21,14 @@ export const PostList = ({
   return (
     <div>
       <h2>포스트 목록</h2>
-      <ol>
+      <ol className="post-list">
         {posts.map((post) => (
           <li
             key={post.id}
             onClick={() => {
               onPostClick(post.id);
             }}
-            style={{
-              cursor: 'pointer',
-              fontWeight: post.id === selectedPostId ? 'bold' : 'normal',
-              backgroundColor:
-                post.id === selectedPostId ? '#f0f0f0' : 'transparent',
-              padding: '10px',
-              borderBottom: '1px solid #ccc',
-            }}
+            className={post.id === selectedPostId ? 'selected' : ''}
           >
             {post.title}
           </li>
