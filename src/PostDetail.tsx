@@ -1,3 +1,5 @@
+import './css/PostDetail.css';
+
 import { useEffect, useState } from 'react';
 
 type Post = {
@@ -44,18 +46,22 @@ export const PostDetail = ({ postId }: { postId: number }) => {
     <div>
       {post != null ? (
         <>
-          <h2>내용</h2>
-          <p>{post.body}</p>
-          <h2>댓글</h2>
-          {comments.map((comment) => (
-            <div key={comment.id} style={{ marginBottom: '10px' }}>
-              <strong>작성자 : {comment.email}</strong>
-              <p>{comment.body}</p>
-            </div>
-          ))}
+          <div className="post-content">
+            <h2>내용</h2>
+            <p>{post.body}</p>
+          </div>
+          <div className="comments-section">
+            <h2>댓글</h2>
+            {comments.map((comment) => (
+              <div key={comment.id} className="comment">
+                <strong>작성자 : {comment.email}</strong>
+                <p>{comment.body}</p>
+              </div>
+            ))}
+          </div>
         </>
       ) : (
-        <p>Loading post...</p>
+        <p>불러오는 중...</p>
       )}
     </div>
   );

@@ -1,4 +1,5 @@
 import './reset.css';
+import './css/App.css';
 
 import { useEffect, useState } from 'react';
 
@@ -38,15 +39,15 @@ export const App = () => {
   };
 
   return (
-    <div style={{ display: 'flex' }}>
-      <div style={{ flex: 1, padding: '10px', borderRight: '1px solid black' }}>
+    <div className="app-container">
+      <div className="post-list-container">
         <PostList
           posts={posts}
           onPostClick={handlePostClick}
           selectedPostId={selectedPostId}
         />
       </div>
-      <div style={{ flex: 2, padding: '10px' }}>
+      <div className="post-detail-container">
         {selectedPostId != null && <PostDetail postId={selectedPostId} />}
       </div>
     </div>

@@ -1,0 +1,21 @@
+.post-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.post-list li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: color 0.3s;
+}
+
+.post-list li:hover {
+  color: gray;
+}
+
+.post-list li.selected {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  color: black;
+}
